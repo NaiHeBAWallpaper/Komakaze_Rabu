@@ -44,7 +44,8 @@ const subtitleLocales = {
 	Chinese: 'zh-Hans',
 	TraditionalChinese: 'zh-Hant',
 	Japanese: 'ja',
-	Korean: 'ko'
+	Korean: 'ko',
+	Thai: 'th'
 };
 
 const CHARACTER = 'CH0166';
@@ -62,9 +63,9 @@ const AUDIO_DETAIL = [
                 "ママの言うことはちゃんと聞いときなさいよ、あんたたち。"
             ],
             English: [
-                "One, two, three, four, five, six. Alright!",
-                "All six of them are present and accounted for!",
-                "You all better listen to what your 'Mama' says, you hear me?"
+                "One, two, three, four, five, six. Perfect!",
+                "Rescued all six of them!",
+                "You should listen to your mommy, okay?"
             ],
             Chinese: [
                 "一、二、三、四、五、六。好！",
@@ -72,15 +73,16 @@ const AUDIO_DETAIL = [
                 "你们几个可要好好听妈妈的话哦。"
             ],
             TraditionalChinese: [
-                "一、二、三、四、五、六。好！",
-                "六隻小鴨全部都在這！",
-                "你們幾個可要好好聽媽媽的話哦。"
+                "一、二、三、四、五、六。很好！",
+                "六隻全都到齊了呢！",
+                "要乖乖聽媽媽的話哦，你們。"
             ],
             Korean: [
-                "하나, 둘, 셋, 네, 다섯, 여섯",
-                "모두 여섯 명이 존재하고 계산되어 있습니다!",
-                "엄마 말 좀 들어봐"
-            ]
+                "하나, 둘, 셋, 넷, 다섯, 여섯. 좋아!",
+                "여섯 마리 전부 다 구했네!",
+                "엄마 말을 잘 들어야지, 알겠니?"
+            ],
+            Thai: ["หนึ่ง สอง สาม สี่ ห้า หก ดีละ!","หาเจอครบ หกตัวแล้ว!","ต้องเชื่อฟังแม่กันสิ เข้าใจมั้ย?"]
         }
     },
     {
@@ -90,21 +92,22 @@ const AUDIO_DETAIL = [
                 "これで一件落着、っと！"
             ],
             English: [
-                "Looks like the mother duck is all right now, too.",
-                "And with that, case closed!"
+                "Momma Duck also seems to be doing fine now...",
+                "...so that's another problem solved!"
             ],
             Chinese: [
                 "鸭子妈妈看起来已经没事了。",
                 "这样就解决啦！"
             ],
             TraditionalChinese: [
-                "鴨子媽媽看起來已經沒事了。",
-                "這樣就解決啦！"
+                "母鴨看起來也沒問題了呢。",
+                "這樣就圓滿落幕了！"
             ],
             Korean: [
-                "이제 암컷도 괜찮아 보입니다.",
-                "그리고 그 사건은 끝났어!"
-            ]
+                "엄마 오리도 이젠 괜찮아 보이고,",
+                "이걸로 한 건 해결, 이네!"
+            ],
+            Thai: ["แม่เป็ดก็ เหมือนจะไม่เป็นไรแล้ว","งั้นก็ถือว่าคลี่คลาย เรื่องนี้ได้แล้วเนอะ!"]
         }
     },
     {
@@ -115,9 +118,9 @@ const AUDIO_DETAIL = [
                 "え？……あっ！？えっと……"
             ],
             English: [
-                "Wh-Wh-Wh... What are you saying!?",
-                "Sensei, isn't that a little rude!?",
-                "Huh...? Ah!? Um..."
+                "Wh-Wh-Wh-What are you talking about?!",
+                "Sensei, isn't that a bit rude?",
+                "Huh?...Ah?! That's..."
             ],
             Chinese: [
                 "什什什么…老师你在说什么啊！！",
@@ -125,15 +128,16 @@ const AUDIO_DETAIL = [
                 "诶…？啊！嗯…"
             ],
             TraditionalChinese: [
-                "什什什麼…老師你在說什麼啊！！",
-                "老師，那種說法是不是有些失禮了？",
-                "誒…？啊！嗯…"
+                "你，你你你……你在說什麼啊！！",
+                "老師，那句話不會有點失禮嗎？",
+                "咦？……啊！？那個……"
             ],
             Korean: [
-                "무슨 소리야?",
-                "선생님, 그건 좀 무례한 말이지?",
-                "어? 어?"
-            ]
+                "뭐, 뭐뭐뭐, 뭔 소리하는 거야!!!",
+                "선생, 그거 좀 실례 아냐?",
+                "으에?…… 앗! 그러니까……."
+            ],
+            Thai: ["อะไรๆๆๆ พูดอะไรเนี่ย!!!","ครู แบบนั้นมันเสียมารยาทนะ?","หืม? อ๊ะ...!? คะ...คือว่า..."]
         }
     },
     {
@@ -143,21 +147,22 @@ const AUDIO_DETAIL = [
                 "も、もちろん！リーダーだもの！この程度できないとダメじゃない！"
             ],
       English: [
-                "Ah, aaah! Th-That's what you meant!?",
-                "O-Of course! I'm the leader, after all! It'd be bad if I couldn't at least do this much!"
+                "Ah, ah! So that's what you meant!",
+                "Of course, a leader should have a compassionate side too!"
             ],
             Chinese: [
                 "啊，啊啊！原，原来是那样！？",
                 "当，当然！我毕竟是队长！这种程度解决不了可不行啊！"
             ],
             TraditionalChinese: [
-                "啊，啊啊！原，原來是那樣！？",
-                "當，當然！我畢竟是隊長！這種程度解決不了可不行啊！"
+                "啊，啊啊！原，原來是那個意思啊！？",
+                "當，當然！我可是隊長呢！這種程度做不到怎麼行呢！"
             ],
             Korean: [
-                "아, 아, 그게 무슨 뜻이야?",
-                "물론, 내가 지도자가니까, 적어도 이만큼은 할 수 없었으면 좋겠어!"
-            ]
+                "아, 아! 역시 그런 의미지!",
+                "물론 리더는 그런 포용적인 면모가 있어야지!"
+            ],
+            Thai: ["อ่า อ๊ะ! หมายความอย่างนั้นละ!","คนเป็นหัวหน้า ก็ต้องมีมุมที่ ใจกว้างแบบนั้นละ!"]
         }
     },
     {
@@ -168,9 +173,9 @@ const AUDIO_DETAIL = [
                 "（まさか、わざとだったり……するのかしら……？）"
             ],
             English: [
-                "(Sensei, really... did he just misspeak? Or did he do that on purpose...?)",
-                "(It's annoying either way! But if he did it on purpose, it's even more frustrating!!)",
-                "(There's no way he'd do that on purpose... would he...?)"
+                "(Is Sensei doing this on purpose? Maybe they're just clumsy?)",
+                "(Even if they are, it pisses me off. But it's worse if it was on purpose!)",
+                "(...There's no way that was on purpose... Right...?)"
             ],
             Chinese: [
                 "（老师真的只是说错话了吗？还是故意的…？）",
@@ -178,15 +183,16 @@ const AUDIO_DETAIL = [
                 "（难道说，真的是故意的吗…？）"
            ],
             TraditionalChinese: [
-                "（老師真的只是說錯話了嗎？還是故意的…？）",
-                "（不管怎樣都很氣人！如果是故意的更是火大！！）",
-                "（難道說，真的是故意的嗎…？）"
+                "（老師也真是的，　真的只是說錯話嗎？　還是是故意的……？）",
+                "（不管哪種都讓人火大！　如果是故意的就更氣了！！）",
+                "（該不會，真的是故意……　那麼說的吧……？）"
             ],
             Korean: [
-                "(선생님, 정말... 그는 단지 말을 잘못 했습니까?",
-                "(그건 어쩔 수 없이 짜증나는 일이지만, 의도적으로 그랬다면 더 짜증나는 일이죠!!)",
-                "(그는 의도적으로 그렇게 할 수 있는 방법은 없습니다... 그는...?)"
-            ]
+                "(선생은 말실수를 많이 하는 건지, 일부러 이러는 건지……)",
+                "(실수여도 열받고, 노린 거면 더 열받아!)",
+                "(……진짜로 노리고 그러는 건…… 아니겠지……?)"
+            ],
+            Thai: ["(ครูนี่ละก็ พลั้งปากไป หรือว่าตั้งใจกันแน่...?)","(ไม่ว่าจะแบบไหนก็น่าโมโห! ถ้าจงใจจะยิ่งโมโหกว่าเดิมอีก!)","(คงไม่ได้ตั้งใจ จริงๆ... หรอกเนอะ...?)"]
         }
     }
 ];
@@ -297,7 +303,7 @@ function playVoiceline() {
 			track.play().catch(finish);
 
 			if (dialogBox) {
-				textbox.textContent = dialog[window.selectedLanguage][index];
+				textbox.textContent = getSubtitleText(dialog, window.selectedLanguage, index);
 				textbox.style.opacity = 1;
 			}
 		},
@@ -467,6 +473,16 @@ function setMouse(event) {
 	return { x: ax - canvas.width * positionX, y: ay - canvas.height * positionY };
 }
 
+function getSubtitleText(dialog, language, index) {
+	let text = dialog?.[language]?.[index];
+	if (text == null && language === 'Thai') {
+		language = 'English';
+		text = dialog?.[language]?.[index];
+	}
+	textbox.lang = subtitleLocales[language];
+	return text ?? "";
+}
+
 function updateSubtitleLanguage() {
 	let language = subtitleLanguagePreference;
 	if (language === 'auto') {
@@ -480,6 +496,8 @@ function updateSubtitleLanguage() {
 			language = 'Japanese';
 		} else if (primary === 'ko' || primary === 'korean' || primary === 'koreana') {
 			language = 'Korean';
+		} else if (primary === 'th' || primary === 'thai') {
+			language = 'Thai';
 		} else {
 			language = 'English';
 		}
@@ -489,7 +507,7 @@ function updateSubtitleLanguage() {
 	window.selectedLanguage = language;
 	textbox.lang = subtitleLocales[language];
 	const clip = currentTracks.at(-1);
-	if (dialogBox && clip) textbox.textContent = clip.dialog[language][clip.index];
+	if (dialogBox && clip) textbox.textContent = getSubtitleText(clip.dialog, language, clip.index);
 }
 
 function init() {
